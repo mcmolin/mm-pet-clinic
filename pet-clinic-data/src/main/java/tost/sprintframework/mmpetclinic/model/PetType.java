@@ -1,4 +1,4 @@
-package tost.springframework.mmpetclinic.model;
+package tost.sprintframework.mmpetclinic.model;
 
 public class PetType {
 

@@ -1,4 +1,4 @@
-package tost.springframework.mmpetclinic.model;
+package tost.sprintframework.mmpetclinic.model;
 
 import java.time.LocalDate;
 
