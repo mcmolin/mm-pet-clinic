@@ -14,7 +14,7 @@
     </parent>
     <groupId>tost.springframework</groupId>
     <artifactId>mm-pet-clinic</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
     <name>mm-pet-clinic</name>
     <description>Demo project for Spring Boot</description>
 
@@ -42,7 +42,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:mcmolin/mm-pet-clinic.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>mm-pet-clinic-0.0.2</tag>
   </scm>
 
 
