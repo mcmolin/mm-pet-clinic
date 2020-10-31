@@ -6,8 +6,6 @@ import tost.sprintframework.mmpetclinic.model.Owner;
 import tost.sprintframework.mmpetclinic.model.Vet;
 import tost.sprintframework.mmpetclinic.services.OwnerService;
 import tost.sprintframework.mmpetclinic.services.VetService;
-import tost.sprintframework.mmpetclinic.services.map.OwnerServiceMap;
-import tost.sprintframework.mmpetclinic.services.map.VetServiceMap;
 
 import java.util.stream.Collectors;
 
@@ -18,9 +16,9 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
 
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

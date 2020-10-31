@@ -1,11 +1,13 @@
 package tost.sprintframework.mmpetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import tost.sprintframework.mmpetclinic.model.Pet;
-import tost.sprintframework.mmpetclinic.services.CrudService;
+import tost.sprintframework.mmpetclinic.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+@Service
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
     public Set<Pet> findAll() {
