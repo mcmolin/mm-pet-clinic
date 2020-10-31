@@ -1,11 +1,11 @@
 package tost.sprintframework.mmpetclinic.services.map;
 
 import tost.sprintframework.mmpetclinic.model.Vet;
-import tost.sprintframework.mmpetclinic.services.CrudService;
+import tost.sprintframework.mmpetclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
