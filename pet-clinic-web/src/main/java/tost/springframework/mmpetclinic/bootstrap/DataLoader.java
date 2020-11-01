@@ -7,8 +7,6 @@ import tost.sprintframework.mmpetclinic.model.Vet;
 import tost.sprintframework.mmpetclinic.services.OwnerService;
 import tost.sprintframework.mmpetclinic.services.VetService;
 
-import java.util.stream.Collectors;
-
 @Component
 public class DataLoader implements CommandLineRunner {
 
@@ -53,9 +51,10 @@ public class DataLoader implements CommandLineRunner {
 
         vetService.save(vet2);
 
-        System.out.println("Loaded Vets....");
+        System.out.println("Loaded Vets.... " + vetService.findAll().stream().count());
 
-        vetService.findAll().stream().filter(v -> v.getId().equals(1L)).collect(Collectors.toList()).forEach(res -> System.out.println(res.getFirstName()));
+
+        //vetService.findAll().stream().filter(v -> v.getId().equals(1L)).collect(Collectors.toList()).forEach(res -> System.out.println(res.getFirstName()));
 
 
     }
