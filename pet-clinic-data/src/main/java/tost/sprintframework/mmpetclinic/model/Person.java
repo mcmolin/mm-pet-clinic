@@ -1,16 +1,16 @@
 package tost.sprintframework.mmpetclinic.model;
 
-public class Person extends BaseEntity{
+public class Person extends BaseEntity {
 
-    private String fistName;
+    private String firstName;
     private String lastName;
 
-    public String getFistName() {
-        return fistName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFistName(String fistName) {
-        this.fistName = fistName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {

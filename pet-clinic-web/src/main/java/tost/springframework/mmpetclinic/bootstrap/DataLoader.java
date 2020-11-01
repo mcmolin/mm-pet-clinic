@@ -25,14 +25,14 @@ public class DataLoader implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Owner owner1 = new Owner();
         owner1.setId(1L);
-        owner1.setFistName("Michael");
+        owner1.setFirstName("Michael");
         owner1.setLastName("Weston");
 
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
         owner2.setId(2L);
-        owner2.setFistName("Fiona");
+        owner2.setFirstName("Fiona");
         owner2.setLastName("Glenanner");
 
         ownerService.save(owner2);
@@ -41,21 +41,21 @@ public class DataLoader implements CommandLineRunner {
 
         Vet vet1 = new Vet();
         vet1.setId(1L);
-        vet1.setFistName("Sam");
+        vet1.setFirstName("Sam");
         vet1.setLastName("Axe");
 
         vetService.save(vet1);
 
         Vet vet2 = new Vet();
         vet2.setId(2L);
-        vet2.setFistName("Jessie");
+        vet2.setFirstName("Jessie");
         vet2.setLastName("Porter");
 
         vetService.save(vet2);
 
         System.out.println("Loaded Vets....");
 
-        vetService.findAll().stream().filter(v -> v.getId().equals(1L)).collect(Collectors.toList()).forEach(res -> System.out.println(res.getFistName()));
+        vetService.findAll().stream().filter(v -> v.getId().equals(1L)).collect(Collectors.toList()).forEach(res -> System.out.println(res.getFirstName()));
 
 
     }

@@ -4,7 +4,24 @@
     <title>List of Pet Ownders</title>
 </head>
 <body>
+<!--/*@thymesVar id="owner" type="tost.springframework.mmpetclinic.model.Owner"*/-->
 <h1 th:text="'List of Owners'">Owners List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="owner : ${owners}">
+            <td th:text="${owner.getId()}">1</td>
+            <td th:text="${owner.getFirstName()}">Joe</td>
+            <td th:text="${owner.getLastName()}">Buck</td>S
+        </tr>
+    </tbody>
+</table>
 
 </body>
 </html>
