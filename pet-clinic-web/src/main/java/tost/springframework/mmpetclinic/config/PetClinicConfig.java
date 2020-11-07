@@ -3,10 +3,12 @@ package tost.springframework.mmpetclinic.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import tost.sprintframework.mmpetclinic.services.OwnerService;
+import tost.sprintframework.mmpetclinic.services.PetService;
 import tost.sprintframework.mmpetclinic.services.PetTypeService;
 import tost.sprintframework.mmpetclinic.services.VetService;
 import tost.sprintframework.mmpetclinic.services.map.OwnerServiceMap;
-import tost.sprintframework.mmpetclinic.services.map.PetTypeMapService;
+import tost.sprintframework.mmpetclinic.services.map.PetServiceMap;
+import tost.sprintframework.mmpetclinic.services.map.PetTypeServiceMap;
 import tost.sprintframework.mmpetclinic.services.map.VetServiceMap;
 
 
@@ -15,7 +17,7 @@ public class PetClinicConfig {
 
     @Bean
     public OwnerService ownerService() {
-        return new OwnerServiceMap();
+        return new OwnerServiceMap(petTypeService(), petService());
     }
 
 
@@ -26,7 +28,12 @@ public class PetClinicConfig {
 
     @Bean
     public PetTypeService petTypeService(){
-        return new PetTypeMapService();
+        return new PetTypeServiceMap();
+    }
+
+    @Bean
+    public PetService petService(){
+        return new PetServiceMap();
     }
 
 }
