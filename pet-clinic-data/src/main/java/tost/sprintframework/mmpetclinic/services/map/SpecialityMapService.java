@@ -2,12 +2,12 @@ package tost.sprintframework.mmpetclinic.services.map;
 
 import org.springframework.stereotype.Service;
 import tost.sprintframework.mmpetclinic.model.Speciality;
-import tost.sprintframework.mmpetclinic.services.SpecialtiesService;
+import tost.sprintframework.mmpetclinic.services.SpecialityService;
 
 import java.util.Set;
 
 @Service
-public class SpecialtiesServiceMap extends AbstractMapService<Speciality, Long> implements SpecialtiesService {
+public class SpecialityMapService extends AbstractMapService<Speciality, Long> implements SpecialityService {
     @Override
     public Set<Speciality> findAll() {
         return super.findAll();
