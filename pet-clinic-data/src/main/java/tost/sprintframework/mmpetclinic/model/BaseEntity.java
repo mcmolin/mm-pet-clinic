@@ -7,7 +7,7 @@ import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 
 
-@MappedSuperclass
+@MappedSuperclass //Note* entities with annotations MappedSuperclass do not get persisted to the DB
 public class BaseEntity implements Serializable {
 
     @Id
