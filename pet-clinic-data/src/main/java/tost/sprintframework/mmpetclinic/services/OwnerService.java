@@ -5,6 +5,6 @@ import tost.sprintframework.mmpetclinic.model.Owner;
 
 public interface OwnerService extends CrudService<Owner, Long>{
 
-   Owner findByLastName(Long id);
+   Owner findByLastName(String lastName);
 
 }
